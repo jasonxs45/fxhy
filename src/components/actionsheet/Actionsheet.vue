@@ -1,0 +1,120 @@
+<template>
+  <popup :open="open" :history="history" :fast-close="fastClose" @on-close="closePopupHandler" @on-enter="enterHandler">
+    <div :class="['actionsheet-inner']" onselectstart="return false;">
+      <div :class="['actionsheet-items']">
+        <slot></slot>
+      </div>
+      <div v-if="cancel" :class="'actionsheet-cancel'" @click="closeHandler">
+        {{cancelText}}
+      </div>
+    </div>
+  </popup>
+</template>
+
+<script>
+import Popup from '../popup'
+export default {
+  components: {
+    Popup
+  },
+  props: {
+    open: {
+      type: Boolean,
+      default: false
+    },
+    history: {
+      type: Boolean,
+      default: true
+    },
+    value: {
+      type: [String, Number]
+    },
+    cancel: {
+      type: Boolean,
+      default: false
+    },
+    cancelText: {
+      type: String,
+      default: '取消'
+    },
+    fastClose: {
+      type: Boolean,
+      default: true
+    }
+  },
+  computed: {
+    classes () {
+      return ['actionsheet']
+    }
+  },
+  mounted () {
+    if (this.open) {
+      requestAnimationFrame(() => {
+        this.$el.style.display = 'block'
+      })
+    }
+  },
+  watch: {
+    open (value) {
+      if (value) {
+        requestAnimationFrame(() => {
+          this.$el.style.display = 'block'
+          this.$emit('on-open')
+        })
+      } else {
+        setTimeout(() => {
+          requestAnimationFrame(() => {
+            this.$el.style.display = 'none'
+          })
+        }, 300)
+      }
+    }
+  },
+  data () {
+    return {
+    }
+  },
+  methods: {
+    clickHandler (value) {
+      this.$emit('on-close')
+      this.$emit('on-click', value)
+    },
+    closeHandler () {
+      this.$emit('on-close')
+    },
+    closePopupHandler () {
+      this.$emit('on-close')
+    },
+    enterHandler () {
+      if (!this.$children) return
+      requestAnimationFrame(() => {
+        this.$children[0].$children.forEach((item) => {
+          if (item.$el.className.indexOf('overlay') === -1) {
+            item.value === this.value && (item.checked = true)
+            item.$off('click').$on('click', this.clickHandler)
+          }
+        })
+      })
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+  @import '~styles/variable.scss';
+  @import '~styles/mixins.scss';
+  .actionsheet{
+    &-inner{
+      background:#fff;
+      max-height: 80%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overflow-scrolling: touch;
+    }
+    &-cancel{
+      padding: $item-padding;
+      border-top:10px solid #eee;
+      color:$sub-color;
+    }
+  }
+</style>
