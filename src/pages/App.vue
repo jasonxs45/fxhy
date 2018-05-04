@@ -9,6 +9,9 @@
       <row>
         <flexbox>
           <flexbox-item>
+            <x-link href="/pages/introduction"><img src="static/images/e0.png"/></x-link>
+          </flexbox-item>
+          <flexbox-item>
             <x-link href="/pages/products"><img src="static/images/e1.png"/></x-link>
           </flexbox-item>
           <flexbox-item>
@@ -24,7 +27,7 @@
               <img src="static/images/e4.png"/>
             </x-link>
           </flexbox-item>
-          <flexbox-item>
+          <flexbox-item style="display:none">
             <a @click="waiting">
               <img src="static/images/e5.png"/>
             </a>

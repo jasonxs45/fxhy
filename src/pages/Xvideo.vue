@@ -9,7 +9,17 @@
         <div class="video-panel" v-for="(item,index) in list" :key="'item'+index">
           <container>
             <div class="title">{{item.vTitle}}</div>
-            <div class="v-wrapper" v-html="item.vSrc"></div>
+            <!-- <div class="v-wrapper" v-html="item.vSrc"></div> -->
+            <div class="v-wrapper">
+              <video
+                controls="controls"
+                playsinline
+                webkit-playinline
+                :src="item.zSrc"
+                :poster="item.pSrc"
+                width="100%"
+                :key="'video'+index"></video>
+            </div>
           </container>
         </div>
         <footnav></footnav>
@@ -27,7 +37,7 @@ import {
   Footnav
 } from 'components'
 export default {
-  name: 'video',
+  name: 'Xvideo',
   components: {
     Layout,
     Container,
@@ -38,12 +48,14 @@ export default {
     return {
       list: [
         {
-          vTitle: '福星惠誉企业宣传片（上）',
-          vSrc: '<iframe frameborder="0" width="100%" height="auto" src="https://v.qq.com/iframe/player.html?vid=i0520entt22&tiny=0&auto=0" allowfullscreen></iframe>'
+          vTitle: '福星惠誉企业品牌宣传片',
+          pSrc: 'static/images/cover1.png',
+          zSrc:'http://cdn.juzhen.net/2018/fxhysource/introduce2018v2.mp4'
         },
         {
-          vTitle: '福星惠誉企业宣传片（下）',
-          vSrc: '<iframe frameborder="0" width="100%" height="auto" src="https://v.qq.com/iframe/player.html?vid=t0520as5o2l&tiny=0&auto=0" allowfullscreen></iframe>'
+          vTitle: '福星惠誉大爱武汉宣传片',
+          pSrc: 'static/images/cover2.png',
+          zSrc:'http://cdn.juzhen.net/2018/fxhysource/imagev2.mp4'
         }
       ]
     }
@@ -94,6 +106,13 @@ export default {
       margin: .5rem 0;
       border-left: 4px solid $sub-color;
       padding-left: 8px;
+    }
+    .v-wrapper{
+      video{
+        display: block;
+        background: #ccc;
+        width: 100%;
+      }
     }
   }
 }

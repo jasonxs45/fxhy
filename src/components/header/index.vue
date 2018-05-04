@@ -33,8 +33,8 @@
                   <span slot="title-icon" class="title-icon" :class="['i'+0]"></span>
                   <div class="" slot="panel">
                     <ul class="menus">
-                      <li class="menu-item">
-                          <a href="http://wx.juzhen.net/2016/fxhyExpo/index.html" class="">星历程</a>
+                      <li class="menu-item" @click="linkClick">
+                          <x-link href="/pages/introduction">星简介</x-link>
                       </li>
                       <li class="menu-item" @click="linkClick">
                           <x-link href="/pages/newslist">星动态</x-link>

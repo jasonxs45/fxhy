@@ -8,13 +8,19 @@ const ShoppingMall = r => require.ensure([], () => r(require('pages/ShoppingMall
 const Readings = r => require.ensure([], () => r(require('pages/Readings')), 'Readings')
 const Regist = r => require.ensure([], () => r(require('pages/Regist')), 'Regist')
 const ServiceTel = r => require.ensure([], () => r(require('pages/ServiceTel')), 'ServiceTel')
-const Video = r => require.ensure([], () => r(require('pages/Video')), 'Video')
+const Xvideo = r => require.ensure([], () => r(require('pages/Xvideo')), 'Xvideo')
+const Introduction = r => require.ensure([], () => r(require('pages/Introduction')), 'Introduction')
 
 export default [
   {
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path: '/pages/introduction',
+    name: 'introduction',
+    component: Introduction
   },
   {
     path: '/pages/newslist',
@@ -64,6 +70,6 @@ export default [
   {
     path: '/pages/video',
     name: 'video',
-    component: Video
+    component: Xvideo
   }
 ]
