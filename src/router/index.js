@@ -16,7 +16,7 @@ const router = new Router({
 })
 let toast = null
 router.beforeEach((to, from, next) => {
-  wxConf.init()
+  // wxConf.init()
   if (window.$toast) {
     toast = window.$toast({
       type: 'loading',
