@@ -7,11 +7,12 @@
           <img src="static/images/introduction/laozong.jpg" class="mb20 bb1">
           <div class="textZw mb20 bb1">
             <h3>企业简介</h3>
-            <p>福星惠誉成立于2001年，是上市公司福星股份(股票代码000926)的全资子公司，具备房地产一级开发资质。从2005年起，连续被评为中国房地产百强企业。从2007年起，连续位列武汉市房地产开发企业综合实力第一名。</p>
-            <p>公司成立以来，始终秉承“先做人，后做事”的经营理念和“为政府分忧，为百姓造福”的开发宗旨，深耕武汉城中村改造和旧城改造，累计投入改造资金近千亿元人民币，完成拆迁面积超过2000万平方米。相继推出一批标志性的楼盘，奠定了在湖北房地产行业龙头地位，先后被中国房地产指数研究院评为“中国房地产城中村旧城改造专业领先品牌价值TOP10”、“中国房地产综合开发专业领先品牌价值TOP10-城市更新”。</p>
-            <p>近年来,公司深入实施业态多元化、业务全球化、资本国际化、品牌高端化、管理精细化等“五大战略”，有关工作取得重大进展与突破。业态多元化方面，由单一住宅开发向城市综合体转型，实现了在商业地产领域的快速崛起以及产城融合的创新成长。公司相继在北京、深圳、广州、成都、西安、郑州、宁波等城市迅猛扩张布局。</p>
-            <p>业务全球化方面，澳大利亚帕尔玛塔莫顿街项目、美国德克萨斯州府奥斯丁项目的成功落地，标志着公司成功跻身中国海外拓疆的“第一军团”；资本国际化方面，在香港成功搭建起红筹架构，为实现国内国外两个资本市场的互通对流奠定了坚实基础；品牌高端化方面，将企业VI和CI设计注入国际元素，实现了品牌体系全面升级；管理精细化方面，注重项目建设的规范化管理和产品的标准化打造，形成了独具公司特色的产品风格。</p>
-            <p>作为一个品牌企业，公司大力践行社会责任，彰显人文情怀，先后荣获“湖北省爱心慈善奖”、“中华慈善突出贡献单位（企业）奖”、“中国（湖北）最佳企业公民大奖”等多项公益奖项。</p>
+            <p>福星惠誉控股有限公司成立于2001年，是中国A股上市公司湖北福星科技股份有限公司（证券代码：000926）的全资子公司。公司核心业务涵盖住宅开发、商业及物业经营管理、产城融合、生态农业、文旅产业和装配式建筑等领域。</p>
+            <p>创立以来，秉承“先做人，后做事”的经营理念和“为政府分忧，为百姓造福”的开发宗旨，福星惠誉顺应行业发展潮流，积极推动城市的更新进步,为满足人民对幸福生活的追求提供了全方位的优质服务，逐步成长为中国一流的“城市更新与幸福生活服务商”。近年，公司开始了以“强化核心优势、聚焦重点区域、深化全国布局、完善产业生态、做大资本平台”为核心的战略转型，标志着公司发展迈入新阶段。</p>
+            <p>城市更新领域，公司始终聚焦中国经济最具活力的核心经济圈及中西部重点城市群，在规划设计、土地整理、基础设施、商业配套、物业服务、产城融合等领域全方位为中国的城市更新提供科学系统的解决方案。已累计投入城市更新改造资金过千亿元，完成更新改造面积超过2000万平方米，相继推出了福星惠誉•国际城、福星惠誉•水岸星城、福星惠誉•东湖城等一批标志性的品牌项目。公司从2005年起，连续入选中国房地产百强企业，位列武汉市房地产企业综合实力前茅。先后被中国房地产指数研究院评为“中国房地产城中村旧城改造专业领先品牌价值TOP10” 、“中国房地产城市更新综合开发专业领先品牌价值TOP10”。</p>
+            <p>在商业开发和产城融合领域，福星惠誉发挥优势、勇于创新，打造出群星城、福莱中心、光谷总部国际等一批标杆项目，实现了创新成长。目前，公司已在“京津冀都市圈”、“长三角经济圈”、“珠三角经济圈”、“成渝经济圈”、“中原城市群”等区域完成了全国化的布局构架，并成功开拓美国、澳洲等海外市场。</p>
+            <p>作为一个品牌企业，福星惠誉一直积极承担社会责任，致力于乡村振兴、绿色环保、教育扶贫、抢险救灾等公益活动，已累计为社会捐助超过3亿元，先后荣获“湖北省爱心慈善奖”、“中华慈善突出贡献单位（企业）奖”等多项公益大奖。</p>
+            <p>展望未来，公司将继续坚持以经营目标为中心，以创新发展为引领，以品质品牌为根本，以效益效率为主线，以团队建设为保障，持续创造高品质的增长，实现企业的繁荣常盛。公司力争在新的五年规划期内，成为中国领先的“城市更新与幸福生活服务商”。</p>
             <img src="static/images/introduction/ditu.jpg">
           </div>
           <div class="textZw mb20 bb1">
@@ -29,19 +30,7 @@
             <img src="static/images/introduction/tu3.jpg">
           </div>
           <div class="list">
-            <img src="static/images/introduction/js01.jpg">
-            <img src="static/images/introduction/js02.jpg">
-            <img src="static/images/introduction/js03.jpg">
-            <img src="static/images/introduction/js04.jpg">
-            <img src="static/images/introduction/js05.jpg">
-            <img src="static/images/introduction/js06.jpg">
-            <img src="static/images/introduction/js07.jpg">
-            <img src="static/images/introduction/js08.jpg">
-            <img src="static/images/introduction/js09.jpg">
-            <img src="static/images/introduction/js10.jpg">
-            <img src="static/images/introduction/js11.jpg">
-            <img src="static/images/introduction/js12.jpg">
-            <img src="static/images/introduction/js13.jpg">
+            <img v-for="(item, index) in items" :key="'item-'+index" :src="item">
           </div>
           <img src="static/images/introduction/logo.png" class="logo">
         </container>
@@ -78,14 +67,29 @@ export default {
   },
   data() {
     return {
-      item: {}
+      item: {},
+      items: [
+        'static/images/introduction/js01.jpg',
+        'static/images/introduction/js02.jpg',
+        'static/images/introduction/js03.jpg',
+        'static/images/introduction/js04.jpg',
+        'static/images/introduction/js16.jpg',
+        'static/images/introduction/js06.jpg',
+        'static/images/introduction/js15.jpg',
+        'static/images/introduction/js08.jpg',
+        'static/images/introduction/js14.jpg',
+        'static/images/introduction/js10.jpg',
+        'static/images/introduction/js11.jpg',
+        'static/images/introduction/js12.jpg',
+        'static/images/introduction/js13.jpg'
+        // 'static/images/introduction/js05.jpg',
+        // 'static/images/introduction/js07.jpg',
+        // 'static/images/introduction/js09.jpg'
+      ]
     }
-  },
-  props: {
   },
   created() {
     //alert(0)
-
   },
   methods: {},
   filters: {
