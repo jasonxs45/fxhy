@@ -53,12 +53,19 @@
       <x-link href="/pages/newslist"><div class="check-more">查看更多<icon>&#xe65f;</icon></div></x-link>
     </div>
     <split></split>
-    <div class="enter-block">
+    <div class="map">
+      <h3 class="title"><span class="icon"></span><span class="text">福星惠誉的中国版图</span></h3>
+      <div class="map-img">
+        <img src="static/images/map.jpg" alt="" @click="$router.push({name: 'products'})">
+      </div>
+    </div>
+    <split></split>
+    <!-- <div class="enter-block">
       <img src="static/images/e6.png" @click="waiting" />
     </div>
     <div class="enter-block">
       <x-link href="/pages/readings"><img src="static/images/e7.png" /></x-link>
-    </div>
+    </div> -->
     <footnav></footnav>
   </div>
 </template>
@@ -180,10 +187,11 @@ export default {
 @import '~styles/mixins.scss';
   .swiper{
     width:100%;
-    height:6.4rem;
+    height:15.787rem;
     .swiper-img{
       width:100%;
       height:100%;
+      object-fit: cover;
       &>img{
         width:100%;
         height:100%;
@@ -191,14 +199,12 @@ export default {
     }
   }
   .enter5{
-    padding-top:10px !important;
-    padding-bottom:10px !important;
+    padding:0 !important;
     .row{
-      margin-left:-5px;
-      margin-right:-5px;
+      margin-left:0;
+      margin-right:0;
     }
     .flexbox-item{
-      margin:5px;
       a{
         display:block;
         width:100%;
@@ -206,8 +212,9 @@ export default {
       }
     }
   }
-  .enter-news{
-      >.title{
+  .enter-news, .map{
+    background: #fff;
+    >.title{
       font-size:0;
       padding-top:.64rem;
       padding-left:10px;
@@ -226,6 +233,12 @@ export default {
         font-size:.768rem;
         color:$title-color;
       }
+    }
+  }
+  .map{
+    .map-img{
+      text-align: center;
+      padding: 20px 0;
     }
   }
   .check-more{

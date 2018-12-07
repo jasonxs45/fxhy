@@ -16,7 +16,7 @@ export var wxConf = {
       return false
     }
   },
-  init() {
+  init(cb) {
     let _self = this
     axios.post('/Admin-GetAuthorize', {
       redirectUrl: location.href
@@ -34,6 +34,7 @@ export var wxConf = {
           wx.onMenuShareAppMessage(_self.shareData)
           wx.onMenuShareTimeline(_self.shareData)
           wx.onMenuShareQQ(_self.shareData)
+          cb && cb()
         })
       } else {
         location.href = res.data.Data

@@ -68,6 +68,11 @@ export default {
           height:2.56rem;
           margin-right:10px;
           text-align:center;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
         .text-wrapper{
           flex:1;

@@ -94,13 +94,15 @@
     </div>
     <div class="footer">
       <p class="tel">
-        <span class="icon icon-tel"></span>
-        <span class="text">0086—027—85350028</span>
+        <span class="text">福星惠誉控股有限公司</span>
+        <!-- <span class="icon icon-tel"></span> -->
+        <!-- <span class="text">0086—027—85350028</span> -->
       </p>
       <p class="address">
         <span class="icon icon-add"></span>
         <span class="text">中国·武汉 新华路186号福星国际商会大厦</span>
       </p>
+      <p class="laws"><span class="text" @click="seeLaws">法律声明</span></p>
       <p class="powerby">
         Powered By
         <span>Matrix</span>
@@ -146,7 +148,8 @@ export default {
       active: 0,
       menushowing: [
         true, false, false, false
-      ]
+      ],
+      lawsShow: false
     }
   },
   methods: {
@@ -203,6 +206,11 @@ export default {
     goHome() {
       this.$router.push({ name: 'home' })
       this.showMenu()
+    },
+    seeLaws () {
+      this.$router.push({
+        name: 'laws'
+      })
     }
   }
 }
@@ -212,7 +220,7 @@ export default {
 @import '~styles/variable.scss';
 @import '~styles/mixins.scss';
 .footnav {
-  background: #16487f;
+  background: $primary-color;
   position: relative;
   color: #ffffff;
   .side-menu {
@@ -285,7 +293,7 @@ export default {
             top:.8rem !important;
           }
           &-active {
-            background: #16487f;
+            background: $primary-color;
             .accordion {
               .title {
                 &:before {
@@ -324,7 +332,8 @@ export default {
     background: $primary-color;
     padding: 10px;
     .tel,
-    .address {
+    .address,
+    .laws {
       text-align: center;
       font-size: 0;
       margin: 10px 0;
@@ -353,6 +362,11 @@ export default {
         font-size: .55rem;
         font-weight: 100;
         line-height: .64rem;
+      }
+    }
+    .laws {
+      .text{
+        text-decoration: underline;
       }
     }
     .powerby {

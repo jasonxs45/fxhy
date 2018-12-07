@@ -10,6 +10,7 @@ const Regist = r => require.ensure([], () => r(require('pages/Regist')), 'Regist
 const ServiceTel = r => require.ensure([], () => r(require('pages/ServiceTel')), 'ServiceTel')
 const Xvideo = r => require.ensure([], () => r(require('pages/Xvideo')), 'Xvideo')
 const Introduction = r => require.ensure([], () => r(require('pages/Introduction')), 'Introduction')
+const Laws = r => require.ensure([], () => r(require('pages/Laws')), 'Laws')
 
 export default [
   {
@@ -71,5 +72,10 @@ export default [
     path: '/pages/video',
     name: 'video',
     component: Xvideo
+  },
+  {
+    path: '/pages/laws',
+    name: 'laws',
+    component: Laws
   }
 ]

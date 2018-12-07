@@ -238,7 +238,7 @@ export default {
       .side-menu-btn{
         width:50px;
         height:inherit;
-        background:#16487f url(../../../static/images/menu-icon.png) center no-repeat;
+        background:$primary-color url(../../../static/images/menu-icon.png) center no-repeat;
         background-size:40%;
         text-align: center;
       }

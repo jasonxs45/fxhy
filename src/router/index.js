@@ -16,9 +16,6 @@ const router = new Router({
 })
 let toast = null
 router.beforeEach((to, from, next) => {
-  if (process.env.NODE_DEV === 'production') {
-    wxConf.init()
-  }
   if (window.$toast) {
     toast = window.$toast({
       type: 'loading',
@@ -27,7 +24,11 @@ router.beforeEach((to, from, next) => {
       align: 'center'
     })
   }
-  next()
+  if (process.env.NODE_ENV === 'production') {
+    wxConf.init(next)
+  } else {
+    next()
+  }
 })
 router.afterEach((to, from) => {
   toast && toast.$destroy()
