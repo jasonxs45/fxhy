@@ -52,10 +52,15 @@ export default {
           pSrc: 'static/images/cover1.png',
           zSrc:'http://cdn.juzhen.net/2018/fxhysource/introduce2018v2.mp4'
         },
+        // {
+        //   vTitle: '福星惠誉大爱武汉宣传片',
+        //   pSrc: 'static/images/cover2.png',
+        //   zSrc:'http://cdn.juzhen.net/2018/fxhysource/imagev2.mp4'
+        // },
         {
-          vTitle: '福星惠誉大爱武汉宣传片',
-          pSrc: 'static/images/cover2.png',
-          zSrc:'http://cdn.juzhen.net/2018/fxhysource/imagev2.mp4'
+          vTitle: '福星惠誉大爱武汉5周年回顾',
+          pSrc: 'static/images/5years.png',
+          zSrc:'http://cdn.juzhen.net/2018/fxhysource/5years.mp4'
         }
       ]
     }

@@ -32,6 +32,8 @@ import Split from './split'
 import {Ptlist, Ptlistitem} from './ptlist'
 import {Accordion, AccordionGroup} from './accordion'
 import Preview from './preview'
+import ImgRow from './imgrow/ImgRow'
+import ImgCell from './imgrow/ImgCell'
 ((w) => {
   w.$toast = (props, mounted = document.body) => {
     props = Object.assign({
@@ -267,5 +269,7 @@ export {
   Ptlistitem,
   Accordion,
   AccordionGroup,
-  Preview
+  Preview,
+  ImgRow,
+  ImgCell
 }

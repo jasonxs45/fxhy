@@ -43,6 +43,74 @@ export var wxConf = {
       console.log(err);
     })
   },
+  previewImg ({current, urls}) {
+    wx.previewImage({
+      current,
+      urls
+    })
+  },
+  wxUpload (limit, a) {
+    /* 图片组 */
+    let images = {
+      localId: [],
+      serverId: []
+    }
+    /* 选择文件 */
+    wx.chooseImage({
+      count: limit,
+      success (res) {
+        images.localId = res.localIds
+        uploadImage()
+      }
+    })
+
+    /* 微信JSAPI 5.3 上传图片 */
+    function uploadImage () {
+      if (images.localId.length === 0) {
+        alert('请选择图片')
+        return
+      }
+      var i = 0
+      var length = images.localId.length
+      images.serverId = []
+      /* 上载到微信服务器 */
+      function upload () {
+        wx.uploadImage({
+          localId: images.localId[i],
+          success (res) {
+            i++
+            downloadImage(i, res.serverId)
+            if (i < length) {
+              setTimeout(function () {
+                upload()
+              }, 200)
+            }
+          },
+          fail (res) {
+            alert('上传失败' + JSON.stringify(res))
+          }
+        })
+      }
+      upload()
+    }
+    /* 从微信服务器下载图片 */
+    function downloadImage (index, serverID, cb) {
+      return axios.post(
+        location.origin + '/Mobile-wx_UploadImg', // 请求的url地址
+        {
+          serverID
+        }
+      )
+      .then(res => {
+        let url = location.origin + res.data
+        a(url)
+      })
+      .catch(err => {
+        console.log(err)
+        alert('网络错误，请稍后再试')
+      })
+    }
+  },
   apilist: [
     'checkJsApi',
     'onMenuShareTimeline',

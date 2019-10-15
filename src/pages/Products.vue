@@ -138,13 +138,13 @@ export default {
     addList1 () {
       this.pageIndex1++
       this.fetch(1, 10, this.pageIndex1, (data) => {
-        this.list1 = this.list1.concat(data.Data)
+        this.list1 = this.list1.concat(data.data.Data)
       })
     },
     addList2 () {
       this.pageIndex2++
       this.fetch(2, 10, this.pageIndex2, (data) => {
-        this.list2 = this.list1.concat(data.Data)
+        this.list2 = this.list2.concat(data.data.Data)
       })
     },
     changeHandler (value) {

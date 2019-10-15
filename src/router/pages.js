@@ -77,5 +77,25 @@ export default [
     path: '/pages/laws',
     name: 'laws',
     component: Laws
+  },
+  {
+    path: '/pages/message',
+    name: 'message',
+    component: () => import('pages/Message')
+  },
+  {
+    path: '/pages/messagedetail',
+    name: 'messagedetail',
+    component: () => import('pages/MessageDetail')
+  },
+  {
+    path: '/pages/messagesubmit',
+    name: 'messagesubmit',
+    component: () => import('pages/MessageSubmit')
+  },
+  {
+    path: '/pages/messagemanager',
+    name: 'messagemanager',
+    component: () => import('pages/MessageManager')
   }
 ]

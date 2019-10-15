@@ -51,11 +51,17 @@
             </accordion>
           </sidebar-item>
           <sidebar-item @click="sidebarc">
-            <accordion title="客户会" :showing="false" :index="3">
+            <accordion title="客户服务" :showing="false" :index="3">
               <span slot="title-icon" class="title-icon" :class="['i'+2]"></span>
               <div class="" slot="panel">
                 <ul class="menus">
-                  <li class="menu-item">
+                  <li class="menu-item" @click="linkClick">
+                    <x-link href="/pages/message">留言板</x-link>
+                  </li>
+                  <li v-if='admin' class="menu-item" @click="linkClick">
+                    <x-link href="/pages/messagemanager">留言板(管理员)</x-link>
+                  </li>
+                  <!-- <li class="menu-item">
                     <a href="http://www.whfxhy.com/" class="">会员章程</a>
                   </li>
                   <li class="menu-item">
@@ -69,7 +75,7 @@
                   </li>
                   <li class="menu-item">
                     <a href="http://www.whfxhy.com/" class="">会员活动</a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </accordion>
@@ -110,13 +116,13 @@
     </div>
   </div>
 </template>
-
 <script>
 import { Flexbox, FlexboxItem } from '../flexbox'
 import { Sidebar, SidebarItem } from '../sidebar'
 import Icon from '../icon'
 import { Accordion } from '../accordion'
 import XLink from '../link'
+import axios from 'axios'
 export default {
   components: {
     Flexbox,
@@ -149,10 +155,22 @@ export default {
       menushowing: [
         true, false, false, false
       ],
-      lawsShow: false
+      lawsShow: false,
+      admin: false
     }
   },
   methods: {
+    checkid () {
+      return axios({
+        method: 'post',
+        url: '/Mobile-PostAPI',
+        data: {
+          Logic: "Member",
+          Name: "GetIdentity",
+          Data: JSON.stringify({})
+        }
+      })
+    },
     backHandler() {
       if (this.back === true) {
         history.back()
@@ -169,13 +187,13 @@ export default {
       this.$emit('showMenu')
     },
     sidebarc(o, a, i) {
-      if (i === 3) {
-        window.$alert({
-          content: `<img src="static/images/wait.png" style="width:50%"/>
-                    <p style="margin-top:20px">资料添加中</p>`
-        })
-        return
-      }
+      // if (i === 3) {
+      //   window.$alert({
+      //     content: `<img src="static/images/wait.png" style="width:50%"/>
+      //               <p style="margin-top:20px">资料添加中</p>`
+      //   })
+      //   return
+      // }
       if (o.$parent.$children[i].active && o.$parent.$children[i].$children[0].showBool) {
         o.$parent.$children[i].active = false
         o.$parent.$children[i].$children[0].showBool = false
@@ -212,6 +230,20 @@ export default {
         name: 'laws'
       })
     }
+  },
+  created () {
+    this.checkid()
+      .then(res => {
+        const { IsSuccess, Data } = res.data
+        if (IsSuccess) {
+          if (Data.IsSuggestAdmin) {
+            this.admin = true
+          }
+        }
+      })
+      .catch(err => {
+        console.lgo(err)
+      })
   }
 }
 </script>

@@ -8,15 +8,15 @@
       :placeholder="placeholder"
       :readonly="readonly"
       :value="value"
-      :disabled="disabled" 
+      :disabled="disabled"
       :autocomplete="autocomplete"
       :autofocus="autofocus"
       :maxlength="maxlength"
-      :name="name" 
+      :name="name"
       :required="required"
       :pattern="pattern"
       @keyup="keyupHandler"
-      @keydown="keydownHandler" 
+      @keydown="keydownHandler"
       @change="changeHandler"
       @input="inputHandler"
       @invalid="invalidHandler"
@@ -27,7 +27,7 @@
         v-show="clear&&isFocus"
         :class="'input-clear-button'"
         @click="clearHandler"
-        >
+      >
         <icon>&#xe641;</icon>
       </button>
     </transition>
@@ -112,7 +112,7 @@ export default {
           color:#999
         }
       }
-      
+
       &:before{
         @include divider;
         z-index:1;
