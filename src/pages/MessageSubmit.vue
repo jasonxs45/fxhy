@@ -92,7 +92,14 @@ export default {
       uploadedImgs: []
     }
   },
-  computed: {},
+  computed: {
+    lastName () {
+      return this.$store.state.lastName
+    },
+    lastTel () {
+      return this.$store.state.lastTel
+    }
+  },
   methods: {
     uploadImg (res) {
       this.uploadedImgs.push(res)
@@ -150,7 +157,10 @@ export default {
       }
     }
   },
-  created () {}
+  mounted () {
+    this.customer.name = this.lastName
+    this.customer.tel = this.lastTel
+  }
 }
 </script>
 <style lang="scss">

@@ -89,7 +89,6 @@ export default {
           console.log(res)
           this.detail = res.data.Data
           this.detail.imgs = this.detail.Images ? eval(this.detail.Images) : []
-          this.detail.imgs = this.detail.imgs.map(item => (location.origin + item))
         }).catch(err => {
           console.log(err);
         })
@@ -120,7 +119,8 @@ export default {
                 window.$toast({
                   content: '回复成功！',
                   onClose: () => {
-                    this.$router.back()
+                    // this.$router.back()
+                    this.$router.replace('messagemanager')
                   }
                 })
               }
@@ -194,6 +194,7 @@ export default {
     padding: 15px;
     border-radius: 4px;
     margin: 15px 0;
+    line-height: 1.5;
   }
   .reply-area{
     border-top: 1px solid #ddd;

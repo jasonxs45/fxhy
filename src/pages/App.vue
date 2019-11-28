@@ -18,7 +18,7 @@
             <x-link href="/pages/shoppingmall"><img src="static/images/e2.png"/></x-link>
           </flexbox-item>
           <flexbox-item>
-            <x-link href="/pages/regist">
+            <x-link href="/pages/message">
               <img src="static/images/e3.png"/>
             </x-link>
           </flexbox-item>

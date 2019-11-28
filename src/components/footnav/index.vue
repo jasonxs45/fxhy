@@ -20,7 +20,8 @@
                     <x-link href="/pages/newslist">星动态</x-link>
                   </li>
                   <li class="menu-item" @click="linkClick">
-                    <x-link href="/pages/readings">星视界</x-link>
+                    <!-- <x-link href="/pages/readings">星视界</x-link> -->
+                    <a href="http://whbaidu.com/2016/FxhySsci/index.shtml">星视界</a>
                   </li>
                   <li class="menu-item" @click="linkClick">
                     <x-link href="/pages/video">星视频</x-link>

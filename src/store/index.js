@@ -4,15 +4,22 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     user: {
-      id: ''
+      id: '',
+      lastName: '',
+      lastTel: ''
     }
   },
   actions: {
   },
   mutations: {
+    lastSuggest (state, opt) {
+      const { LastSuggestName, LastSuggestTel } = opt
+      state.lastName = LastSuggestName
+      state.lastTel = LastSuggestTel
+    }
   },
   getters: {
-  },  
+  },
   modules: {
   }
 })

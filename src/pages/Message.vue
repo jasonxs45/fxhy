@@ -5,6 +5,7 @@
         <div class="my-title">
           <span class="icon"></span>
           <span class="text">我的留言</span>
+          <router-link class='nav-link' to='/pages/messagesubmit'>提交留言<icon>&#xe65f;</icon></router-link>
         </div>
         <split></split>
         <div class='list'>
@@ -15,7 +16,10 @@
               <div v-if='item.Content2' class='mark'>已回复</div>
             </div>
           </template>
-          <div v-else class='no-data'>暂无记录</div>
+          <div v-else class='no-data'>
+            <p>暂无记录</p>
+            <router-link tag='div' class='nav-btn' to='/pages/messagesubmit'>提交留言</router-link>
+          </div>
         </div>
         <footnav></footnav>
       </x-body>
@@ -29,7 +33,8 @@ import {
   Container,
   XBody,
   Footnav,
-  Split
+  Split,
+  Icon
 } from 'components'
 export default {
   name: 'message',
@@ -38,7 +43,8 @@ export default {
     Container,
     XBody,
     Footnav,
-    Split
+    Split,
+    Icon
   },
   data() {
     return {
@@ -72,6 +78,23 @@ export default {
 <style lang="scss">
 @import '~styles/variable.scss';
 @import '~styles/mixins.scss';
+.nav-link{
+  font-size: 14px !important;
+  float: right;
+  font-weight: 500;
+}
+.nav-link .iconfont{
+  font-size: 14px !important;
+}
+.nav-btn{
+  background: $primary-color;
+  width: 160px;
+  line-height: 44px;
+  height: 44px;
+  margin: 60px auto 30px;
+  color:#fff;
+  border-radius: 4px;
+}
 .my-title{
     font-size:0;
     background: #fff;
